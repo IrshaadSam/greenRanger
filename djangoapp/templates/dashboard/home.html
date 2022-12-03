@@ -1,0 +1,28 @@
+{% extends 'account/base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <div class="text-center">
+        <!-- <h2>Home</h2>
+        <p>Hello {{ user.first_name }}!</p>
+        <p>Your Username : {{ user }}</p>
+        <a class="btn btn-dark" href="{% url 'socialaccount_connections' %}">Settings</a> -->
+        <div class="center">
+            <h3> HOME PAGE </h3>
+          
+            <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category of News
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button"><Link to="/homepage"> Sports</Link></button>
+          <button class="dropdown-item" type="button"><Link to="/homepage"> Entertainment</Link></button>
+          <button class="dropdown-item" type="button"><Link to="/homepage">General Category</Link></button>
+        </div>
+      </div>
+            <h3><Link to="/search"> Quick Search </Link></h3>
+          </div>
+    </div>
+{% endblock %}
